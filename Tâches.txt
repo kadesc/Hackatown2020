@@ -1,0 +1,36 @@
+Étapes : 
+ 
+1) Recherches
+-Postman : Kass
+-requêtes HTML : Jenseth
+-Azure cognitif services : Sara et Miora 
+-App (moins prioritaire) : Miora (plus tard ce soir) 
+
+2) Définir les déchêts qu'on va utiliser
+-Liste d'item avec le type de poubelle 
+
+Items : 
+-Napkin
+-assiette
+-Canette 
+-Fourchette 
+-Vêtements usés
+-Batteries/Déchêts électroniques 
+-Crayon (surligneur qui fonctionne pu) 
+-Feuilles mortes 
+-Bouchon de liège 
+
+
+3) Réaliser le prototype 
+
+4) Préparer présentation 
+
+
+Idées d'amélioraition de l'app
+-Location de friperie, collecte de déchêt électronique (avec GPS, proche de chez toi) 
+-Selon le pays
+-Reconnaitre le type de plastique (1,2,3,4,5,7 sont recyclabes) 
+-Entrées manuelles 
+
+
+
