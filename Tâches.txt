@@ -27,7 +27,7 @@ Items :
 
 
 Idées d'amélioraition de l'app
--Location de friperie, collecte de déchêt électronique (avec GPS, proche de chez toi) 
+-Location de friperie, collecte de déchêt électronique, ecocentre pour objets volumineux/materiaux construction/styromousse (avec GPS, proche de chez toi) 
 -Selon le pays
 -Reconnaitre le type de plastique (1,2,3,4,5,7 sont recyclabes) 
 -Entrées manuelles 
