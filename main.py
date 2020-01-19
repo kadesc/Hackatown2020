@@ -1,4 +1,4 @@
-from computer_vision_api import extractNameTags, makeImageRecognitionAPI, findInDatabase
+from image_recognition_api import extractNameTags, makeImageRecognitionAPI, findInDatabase
 
 if __name__ == "__main__":
     file_names = ['trash.txt','recyclable.txt','compost.txt','other.txt']
