@@ -1,4 +1,3 @@
-
 Recycling bin :
 milk 
 juice carton
@@ -16,8 +15,8 @@ glass
 bottle
 vials
 jars
-Metal
-Tin can
+metal
+tin can
 covers
 lids 
 hangers
