@@ -1,10 +1,18 @@
-from image_recognition_api import extractNameTags, makeImageRecognitionAPI, findInDatabase
+from image_recognition_api import makeImageRecognitionAPI, findInDatabase
+
+'''
+Test url:
+https://raw.githubusercontent.com/Azure-Samples/cognitive-services-sample-data-files/master/ComputerVision/Images/landmark.jpg
+https://www.wsetglobal.com/media/7108/1608x900_wine_bottles.jpg
+
+'''
 
 if __name__ == "__main__":
     file_names = ['trash.txt','recyclable.txt','compost.txt','other.txt']
     image_tags = []
 
-    '''Create search tags'''
+    
+    #Create search tags
     search_mode = input("Enter corresponding number to desired search mode:\n 1 - text, 2 - local image, 3- online image\n")
     if (search_mode == "2"):
         search_mode = "local"
@@ -19,6 +27,7 @@ if __name__ == "__main__":
         image_tags = [image_tags]
     else:
         print("Not a correct number entered")
+
     #Search tags in database and print result
     search_results = findInDatabase(file_names, image_tags)
     if (len(search_results)!= 0):
