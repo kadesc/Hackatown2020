@@ -10,6 +10,16 @@ from PIL import Image
 import sys
 import time
 
+def findInDatabase(file_names, tag):
+    for file_name in file_names:
+        f = open(file_name, "r")
+        lines = f.readlines()
+        for line in lines:
+            if tag == line.strip():
+                output = [tag, file_name[:-4]]     
+        f.close()
+    return output
+
 
 def makeAPI(remote_image_url):
     MINIMAL_CONFIDENCE = 70

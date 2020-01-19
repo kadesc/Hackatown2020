@@ -1,0 +1,20 @@
+Compost bin:
+food
+fruit
+vegetable
+bread
+pasta
+rice
+tea
+coffee filter
+coffee ground
+bean
+egg shells
+plants
+hay
+yard waste
+flowers
+wood chips
+grass clippings
+napkin
+saw dust
