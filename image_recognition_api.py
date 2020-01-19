@@ -106,5 +106,5 @@ def makeImageRecognitionAPI(imageLocationMode, imageLocation):
     image_tags = addOtherTags(tags_results, image_tags, MINIMAL_CONFIDENCE)
 
     image_tags = sortingTags(image_tags)
-
+    image_tags = extractNameTags(image_tags)
     return image_tags

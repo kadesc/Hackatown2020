@@ -6,9 +6,8 @@
 #
 # WARNING! All changes made in this file will be lost!
 
-from image_recognition_api import 
+from image_recognition_api import makeImageRecognitionAPI, findInDatabase 
 from PyQt5 import QtCore, QtGui, QtWidgets 
-from PyQt5.QtWidgets import QFileDialog
 
 
 class Ui_MainWindow(object):
@@ -116,11 +115,6 @@ class Ui_MainWindow(object):
 
         self.btnSearch.clicked.connect(self.clickedBtnSearch)
 
-        self.openFileNameDialog()
-        self.openFileNamesDialog()
-        self.saveFileDialog()
-
-        self.lblImg.clicked.connect(self.openFileNameDialog)
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
@@ -131,39 +125,29 @@ class Ui_MainWindow(object):
         self.lblNomSac.setText(_translate("MainWindow", "Bac correspondant:"))
         self.lblTypeBac.setText(_translate("MainWindow", "Type de bac"))
 
-  '''  def clickedBtnSearch(self):
+    def clickedBtnSearch(self):
         txt = self.txtSearch.toPlainText()
         if txt [4:] == "http":
-            image_tags = makeImageRecognitionAPI("remote", txt)
+            tags = makeImageRecognitionAPI("remote", txt)
         else:
-            image_tags = [txt]
-        search_results = findInDatabase(file_names, image_tags)
-     '''
+            tags = [txt]
 
-    def clickedLblImage(self):
-        #openFileNameDialog(self)
+        search_results = [["fruit","compost"],["bottle","recyclable"],["fruit","compost"]]
+        #search_results = findInDatabase(['trash.txt','recyclable.txt','compost.txt','other.txt'], tags)
+        
+            self.rd1.setText(search_results[0][0])
+            
 
 
-    def openFileNameDialog(self):
-        options = QFileDialog.Options()
-        options |= QFileDialog.DontUseNativeDialog
-        fileName, _ = QFileDialog.getOpenFileName(self,"QFileDialog.getOpenFileName()", "","All Files (*);;Python Files (*.py)", options=options)
-        if fileName:
-            print(fileName)
-    
-    def openFileNamesDialog(self):
-        options = QFileDialog.Options()
-        options |= QFileDialog.DontUseNativeDialog
-        files, _ = QFileDialog.getOpenFileNames(self,"QFileDialog.getOpenFileNames()", "","All Files (*);;Python Files (*.py)", options=options)
-        if files:
-            print(files)
-    
-    def saveFileDialog(self):
-        options = QFileDialog.Options()
-        options |= QFileDialog.DontUseNativeDialog
-        fileName, _ = QFileDialog.getSaveFileName(self,"QFileDialog.getSaveFileName()","","All Files (*);;Text Files (*.txt)", options=options)
-        if fileName:
-            print(fileName)
+    def clickedRdButton(self, radioButton, search_results):
+        if (radioButton == self.rd1):
+            self.lblTypeBac.setText(search_results[0][1])
+        elif (radioButton == self.rd2):
+            self.lblTypeBac.setText(search_results[1][1])
+        elif (radioButton == self.rd3):
+            self.lblTypeBac.setText(search_results[2][1])
+
+
     
 if __name__ == "__main__":
     import sys
