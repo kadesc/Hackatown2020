@@ -12,8 +12,8 @@
 Items : 
 -Napkin
 -assiette
--Canette 
--Fourchette 
+-Cannette 
+-Fourchette
 -Vêtements usés
 -Batteries/Déchêts électroniques 
 -Crayon (surligneur qui fonctionne pu) 
